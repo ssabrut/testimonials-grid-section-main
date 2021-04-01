@@ -1,0 +1,30 @@
+// color
+$moderateViolet: hsl(263, 55%, 52%);
+$veryDarkGrayishBlue: hsl(217, 19%, 35%);
+$veryDarkBlackishBlue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+
+// netutral color
+$lightGray: hsl(0, 0%, 81%);
+$lightGrayishBlue: hsl(210, 46%, 95%);
+
+// mixins
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// media query
+@mixin tablet {
+  @media screen and (max-width: 89.9375rem) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max_width: 47.9375rem) {
+    @content;
+  }
+}

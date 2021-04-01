@@ -1,0 +1,16 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include flexCenter(column);
+  width: 100vw;
+  height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  background-color: $lightGrayishBlue;
+}
