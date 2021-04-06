@@ -24,7 +24,7 @@ $lightGrayishBlue: hsl(210, 46%, 95%);
 }
 
 @mixin mobile {
-  @media screen and (max_width: 47.9375rem) {
+  @media screen and (max-width: 47.9375rem) {
     @content;
   }
 }

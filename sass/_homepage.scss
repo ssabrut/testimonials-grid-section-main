@@ -10,6 +10,29 @@
   height: 60vh;
   margin: auto;
 
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "testi_1 testi_1 testi_2"
+      "testi_4 testi_5 testi_5"
+      "testi_3 testi_3 testi_3";
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+      "testi_1"
+      "testi_1"
+      "testi_2"
+      "testi_4"
+      "testi_5"
+      "testi_5"
+      "testi_3"
+      "testi_3";
+  }
+
   .testimonial__1,
   .testimonial__2,
   .testimonial__3,
@@ -25,7 +48,6 @@
       @include flexCenter(column);
       justify-content: space-evenly;
       align-items: flex-start;
-      flex-wrap: wrap;
       width: 90%;
       height: 80%;
       margin: 1.5rem auto 2rem auto;
@@ -33,7 +55,7 @@
       .user__data {
         display: flex;
         justify-content: space-between;
-        width: 10.875rem;
+        width: 40%;
         z-index: 5;
 
         img {
@@ -79,17 +101,38 @@
     background-image: url(/images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
     background-position: 80% 0%;
+
+    @include tablet {
+      grid-area: testi_1;
+    }
+
+    @include mobile {
+      grid-area: testi_1;
+    }
   }
 
   .testimonial__2 {
     grid-area: testi_2;
     background-color: $veryDarkGrayishBlue;
 
+    @include tablet {
+      grid-area: testi_2;
+    }
+
+    @include mobile {
+      grid-area: testi_2;
+    }
+
     .testimonial__user {
       width: 80%;
+      height: 80%;
 
       .user__data {
         width: 12.875rem;
+
+        @include tablet {
+          width: 100%;
+        }
       }
     }
   }
@@ -98,9 +141,17 @@
     grid-area: testi_3;
     background-color: $white;
 
+    @include tablet {
+      grid-area: testi_3;
+    }
+
+    @include mobile {
+      grid-area: testi_3;
+    }
+
     .testimonial__user {
       width: 80%;
-      height: 80%;
+      height: 90%;
 
       .user__data {
         width: 10.875rem;
@@ -124,11 +175,59 @@
   .testimonial__4 {
     grid-area: testi_4;
     background-color: $white;
+
+    @include tablet {
+      grid-area: testi_4;
+    }
+
+    @include mobile {
+      grid-area: testi_4;
+    }
+
+    .testimonial__user {
+      width: 80%;
+      height: 80%;
+
+      .user__data {
+        width: 12.875rem;
+
+        @include tablet {
+          width: 100%;
+        }
+
+        .user__status {
+          color: $veryDarkBlackishBlue;
+
+          p {
+            color: inherit;
+          }
+        }
+      }
+
+      h2,
+      p {
+        color: $veryDarkBlackishBlue;
+      }
+    }
   }
 
   .testimonial__5 {
     grid-area: testi_5;
     background-color: $veryDarkBlackishBlue;
+
+    @include tablet {
+      grid-area: testi_5;
+    }
+
+    @include mobile {
+      grid-area: testi_5;
+    }
+
+    .testimonial__user {
+      .user__data {
+        width: 12.875rem;
+      }
+    }
   }
 }
 
